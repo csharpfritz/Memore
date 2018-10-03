@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home page";
+}
+
+<script src="~/js/signalr.js"></script>
+<script>
+	const conn = new signalR.HubConnectionBuilder()
+		.withUrl("/memore")
+		.configureLogging(signalR.LogLevel.Information)
+		.build();
+
+	conn.start().catch(err => console.error(err.toString()));
+
+</script>

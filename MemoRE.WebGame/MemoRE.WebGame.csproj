@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>879e8ef5-3d89-43d3-a5f8-e20ce33badd4</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\icons\card0.png" />
+    <Content Remove="wwwroot\icons\card1.png" />
+    <Content Remove="wwwroot\icons\card2.png" />
+    <Content Remove="wwwroot\icons\card3.png" />
+    <Content Remove="wwwroot\icons\card4.png" />
+    <Content Remove="wwwroot\icons\card5.png" />
+    <Content Remove="wwwroot\icons\card6.png" />
+    <Content Remove="wwwroot\icons\restart.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\icons\card0.png" />
+    <EmbeddedResource Include="wwwroot\icons\card1.png" />
+    <EmbeddedResource Include="wwwroot\icons\card2.png" />
+    <EmbeddedResource Include="wwwroot\icons\card3.png" />
+    <EmbeddedResource Include="wwwroot\icons\card4.png" />
+    <EmbeddedResource Include="wwwroot\icons\card5.png" />
+    <EmbeddedResource Include="wwwroot\icons\card6.png" />
+    <EmbeddedResource Include="wwwroot\icons\restart.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
