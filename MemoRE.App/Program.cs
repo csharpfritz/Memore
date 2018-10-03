@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using Microsoft.Extensions.Logging;
 using OpenMacroBoard.SDK;
 using StreamDeckSharp;
 using System;
@@ -50,6 +51,10 @@ namespace MemoRE.App
 
 			HubConnection = new HubConnectionBuilder()
 									.WithUrl(location.ToString())
+									.ConfigureLogging(logging => {
+										logging.SetMinimumLevel(LogLevel.Trace);
+										logging.AddConsole();
+									})
 									.Build();
 			try
 			{
